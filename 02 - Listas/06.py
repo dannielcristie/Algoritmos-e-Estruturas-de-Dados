@@ -4,7 +4,12 @@
 ocorrências de um número especificado.
 
 '''
-#def indiceespecifico(lista)
-lista = [6,1,2,3,5,6]
-for i in lista[i]:
-    print(lista[i])
+def indice_especifico(lista,n):
+	for indice, valor in enumerate(lista):
+		lista[indice]+=1
+		if valor == n:
+			print ("O numero: %d ocorre no indice = %d" % (valor, indice))
+	return('\n')	
+			
+l = [0,1,3,3,3,3,4,8,44,3,3]
+print(indice_especifico(l,3))
