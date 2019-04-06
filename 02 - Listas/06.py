@@ -6,5 +6,5 @@ ocorrências de um número especificado.
 '''
 #def indiceespecifico(lista)
 lista = [6,1,2,3,5,6]
-for i in lista:
+for i in lista[i]:
     print(lista[i])

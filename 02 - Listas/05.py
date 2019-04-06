@@ -11,5 +11,7 @@ def removerepetidos(lista):
     return l
 
 lista = [1, 1, 2, 1, 3, 4, 3, 6, 7, 6, 7, 8, 10 ,9]
-print(lista)
-print(removerepetidos(lista))
+
+print('lista:\n',lista)
+
+print('Sem os repetidos:\n',removerepetidos(lista))
