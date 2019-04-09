@@ -8,10 +8,5 @@ Entrada de dados: Alana
 Saída de dados: ANALA
 
 '''
-<<<<<<< HEAD
 name = str(input('Digite o seu nome:\t')).upper()
-=======
-
-name = str(input('Digite o seu nome:')).upper()
->>>>>>> b6daff637dae68ccb4ac9b6e56ba6dc639aee076
 print(name[::-1])
