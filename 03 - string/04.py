@@ -11,3 +11,6 @@ N
 O
 
 '''
+name = input('Digite o nome:\t')
+for i in name:
+	print(i)
