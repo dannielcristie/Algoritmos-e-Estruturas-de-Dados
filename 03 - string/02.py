@@ -13,16 +13,8 @@ nome de um indivíduo, que antecede o nome de família; nome de batismo, antenom
 
 '''
 
-name = input('Digite seu nome:\t').lower()
-cont = 0
-l = []
-for i in name:
-    if i ==' ':
-        cont+=1
-        l.append(name[i])
-        i = cont
-        
-print(cont)
-print(name)
-print(type(i))
-print(l)
+
+nome =input('Escreva seu nome: ')
+lname = nome.split(' ')
+
+print('Nome: ',lname[0],'\nSobrenome: ',' '.join(lname[1:]))

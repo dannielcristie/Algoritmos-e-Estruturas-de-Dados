@@ -12,4 +12,4 @@ for i in text:
     if i in vogais: 
         cont+=1
 print('A quantidade de caracteres é:\t',n)
-print('\nA quantidade de vogais é:\t',cont)
+print('A quantidade de vogais é:\t',cont)
