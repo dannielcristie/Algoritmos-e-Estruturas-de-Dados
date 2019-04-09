@@ -8,5 +8,6 @@ Entrada de dados: Alana
 Saída de dados: ANALA
 
 '''
+
 name = str(input('Digite o seu nome:')).upper()
 print(name[::-1])
