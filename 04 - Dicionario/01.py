@@ -1,3 +1,4 @@
+#coding=utf-8
 '''
 	Crie um programa que, usando agendaionário, crie uma agenda de tamanho fornecido inicialmente pelo usuário. Leia os dados (nome, telefone) de todos os contatos do usuário de forma que a agenda fique completa e permita imprimir todos os contatos. Por fim, faça uma pesquisa pelo nome e apresente o telefone.
 '''
@@ -17,7 +18,10 @@ def addctt():
 
 def seachctt():
 	name_seach = input('Digite o nome quem deseja procura:\t')
-	print(agenda[name_seach])		
+	if name_seach in agenda:
+		print(agenda[name_seach])		
+	else:
+		print('"Contato não encontrado!"')
 	return()
 
 def showctt():
