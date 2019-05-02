@@ -38,12 +38,49 @@ class Fila:
             self.enfileirar(pilha.desempilhar())
     def reduz_para_n(self,n):
         if self.tamanho() >+n:
-            while(self.tamanho()!= n)
+            while(self.tamanho()!= n):
+                self.desenfileirar()
         
-        
-            
     def __str__(self):
         return self.items
 
+
+class No:
+    def __init__(self, valor):
+        self.valor = valor
+        self.proximo = None
+    def setValor(self, novo_valor):
+        self.valor = novo_valor
+    def setProximo(self, proximo):
+        self.proximo = proximo
+    def getValor(self):
+        return self.valor
+    def getProximo(self):
+        return self.proximo
         
+
+class ListaNaoOrdenada:
+    def __init__(self):
+        self.inicio = None
+    def vazia(self):
+        return self.inicio == None
+        
+    def Inserir(self, item):
+        temp = No(item)
+        temp.setProximo(self.inicio)
+        self.inicio = temp 
+        
+    def Buscar(self, item):
+        atual = self.inicio
+        encontrou = False
+        while atual != None and not encontrou:
+            if atual.getValor() == item:
+                encontrou = True
+            else:
+                atual = atual.getProximo()
+        return encontrou
     
+    
+    
+        
+        

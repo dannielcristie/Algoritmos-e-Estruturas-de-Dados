@@ -1,5 +1,5 @@
 #coding=utf-8
-from aula2304pilha import *
+from estruturas import *
  
 pilha1 = pilha()
 pilha2 = pilha()
