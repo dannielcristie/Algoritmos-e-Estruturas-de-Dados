@@ -79,8 +79,41 @@ class ListaNaoOrdenada:
             else:
                 atual = atual.getProximo()
         return encontrou
-    
-    
-    
         
+    def Remover(self,item):
+        # se o item a ser removido for o primeiro
+        if self.inicio.getValor() = item:
+            self.inicio = self.inicio.getProximo()
+        else:
+            atual = self.inicio
+            previo = None
+            removido = False
+            while atual != None:
+                if atual.getValor() =  item:
+                    previo = atual
+                    atual = atual.getProximo()
+                else:
+                    previo.setProximo() = atual.getProximo()
+                    removido = True
+    
+class ListaOrdenada:
+    def __init__(self):
+        self.inicio = 
+    
+    def Inserir(self, item):
+        atual = self.inicio
+        previo = None
+        parar = False
+        while atual != None and not parar:
+            if atual.getValor() > item:
+                parar = True
+            else:
+                previo = atual
+                atual = atual.getProximo()
         
+        temp = No(item)
+        
+def Separa(lista, n):
+    lista = ListaNaoOrdenada()
+    
+    

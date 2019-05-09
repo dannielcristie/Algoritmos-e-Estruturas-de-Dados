@@ -9,7 +9,7 @@ class pessoa:
     
     def envelhecer(self):
         if self.idade <21:
-            self.altura = self.altura+0,05
+            self.altura = self.altura+0.05
         self.idade+=1
    
   def __str__(self):
