@@ -29,7 +29,7 @@ print(p1.vazia())
 
 ###########################################
                  #fila
-
+'''
 
 f1=Fila()
 
@@ -62,13 +62,20 @@ print(f1)
 
 
 
+'''
 
 
 
 
+l1 = ListaNaoOrdenada()
 
+l1.Inserir(1)
+l1.Inserir(2)
+l1.Inserir(3)
+l1.Inserir(4)
+l1.Inserir(5)
 
-
+print(l1)
 
 
 

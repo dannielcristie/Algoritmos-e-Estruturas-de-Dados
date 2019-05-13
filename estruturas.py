@@ -112,8 +112,21 @@ class ListaOrdenada:
                 atual = atual.getProximo()
         
         temp = No(item)
+ 
+
         
-def Separa(lista, n):
-    lista = ListaNaoOrdenada()
+def separa(lista, n):
+    atual = self.inicio
+    temp  = ListaNaoOrdenada()
+    separou = False
     
+    while atual.getProximo() != None and not separou:
+        if atual.getProximo() == n:
+            temp.inicio = atual.getProximo()
+            atual.setProximo(None)
+            separou = True
+        else:
+            atual = atual.getProximo()
+        
     
+    return lista, temp
