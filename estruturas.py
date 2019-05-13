@@ -62,6 +62,10 @@ class No:
 class ListaNaoOrdenada:
     def __init__(self):
         self.inicio = None
+        
+    def __str__(self):
+        
+    
     def vazia(self):
         return self.inicio == None
         
