@@ -1,5 +1,7 @@
 #coding=utf-8
+from EstruturasDeDados import *
 
+'''
 class Pilha:
 	def __init__(self):
 		self.items = [] 
@@ -17,7 +19,7 @@ class Pilha:
 		for i in self.items:
 			if self.items[i] == valor:
 				print(i)
-
+'''
 '''
 
 p1 = Pilha()
@@ -69,7 +71,7 @@ def sequencia(lista):
 l = ['(){[]']
 print(sequencia(l))
 '''
-
+'''
 def formacao(lista):
 	p_aux = Pilha()
 	valida = True
@@ -90,6 +92,44 @@ def formacao(lista):
 
 l = ['()[{}]']
 print(formacao(l))
+
+'''
+
+class nListaNaoOrdenada:
+	def  MediaValorAcima(self):
+		atual = self.inicio
+		soma = 0 
+		while atual.getProximo() != None:
+			soma = soma + atual.getValor()
+			atual = atual.getProximo()
+		
+		if not self.vazia():
+			media  = (soma/self.tamanho())
+		
+		
+		return media
+		
+		
+l1 = nListaNaoOrdenada()
+
+l1.Inserir(20)
+l1.Inserir(20)
+l1.Inserir(20)
+l1.Inserir(10)
+l1.Inserir(10)
+
+print(l1.MediaValorAcima())
+
+
+
+
+
+
+
+
+
+
+
 
 
 
