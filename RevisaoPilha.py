@@ -1,9 +1,11 @@
 from EstruturasDeDados import Pilha
+from random import *
+
 
 p1 = Pilha()
 p2 = Pilha()
 
-
+'''
 p1.empilhar(3)
 p1.empilhar(4)
 p1.empilhar(4)
@@ -17,7 +19,7 @@ p2.empilhar(4)
 p2.empilhar(4)
 p2.empilhar(5)
 p2.empilhar(100)
-
+'''
 
 '''
 def maior_de_pilha(p1):
@@ -80,7 +82,7 @@ l = [ i for i in range(0,15)]
 print(TPilha(l))
 '''
 
-
+'''
 
 class Aviao:
 	def __init__(self,cia,modelo,ano):
@@ -98,16 +100,27 @@ av2 = Aviao()
 
 
 
+'''
+
+baralho = []
+card = ['Rei de ','Dama de ', 'Valete de ']
+naipe = ['Ouro','Pau','Copa','Espada']
+
+for i in range(1,11):	
+	baralho.append('Pau '+str(i))
+for i in range(1,11):	
+	baralho.append('Ouro '+str(i))
+for i in range(1,11):	
+	baralho.append('Copa '+str(i))
+for i in range(1,11):	
+	baralho.append('Espada '+str(i))
+for i in card:
+	for j in naipe:
+		baralho.append(i+j)
 
 
 
+for i in baralho:
+	print(i)
 
-
-
-
-
-
-
-
-
-
+print(random.choice(baralho))
