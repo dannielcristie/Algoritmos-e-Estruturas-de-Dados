@@ -1,10 +1,10 @@
 #coding=utf-8
-from random import *
-from EstruturasDeDados import *
 
 class Pilha:
 	def __init__(self):
-		self.items = [] 
+		self.items = []
+	def __str__(self):
+		return ','.join([str(i) for i in self.items])
 	def empilhar(self,valor):
 		self.items.append(valor)
 	def desempilhar(self):
@@ -19,11 +19,116 @@ class Pilha:
 		for i in self.items:
 			if self.items[i] == valor:
 				print(i)
+	
+
+class Fila:
+	def __init__(self):
+		self.items = []
 	def __str__(self):
-		pilha = ''
-		for item in self.items:
-			pilha += str(item)  + ','    
-		return pilha
+		return ','.join([str(i) for i in self.items])
+	def enfileirar(self,item):
+		self.items.insert(0,item)
+	def desenfileirar(self):
+		return self.items.pop()
+	def vazia(self):
+		return self.items == []
+	def frente(self):
+		return self.items[0]
+	def tamanho(self):
+		return len(self.items)
+	def inverte(self):
+		pilha = Pilha()
+		while not self.vazia():
+			pilha.empilhar(self.desenfileirar())
+		while not pilha.vazia():
+			self.enfileirar(pilha.desempilhar())
+	def inverter(self):
+		p = Pilha()
+		while not self.vazia():
+			p.empilhar(self.desenfileirar())
+		while not p.vazia():
+			self.enfileirar(p.desempilhar())
+
+class No:
+	def __init__(self,valor):
+		self.valor = valor
+		self.proximo = None
+	def setValor(self,novo_valor):
+		self.valor = novo_valor
+	def setProximo(self, proximo):
+		self.proximo = proximo
+	def getValor(self):
+		return self.valor
+	def getProximo(self):
+		return self.proximo
+
+class ListaNaoordenada:
+	def __init__(self):
+		self.inicio = None
+	def vazia(self):
+		return self.inicio == None
+	def inserir(self,item):
+		temp = No(item)
+		temp.getProximo(self.inicio)
+		self.inicio = temp
+	def buscar(self,item):
+		atual = self.inicio
+		
+
+
+
+
+
+
+
+
+
+
+'''
+n1 = No(1)
+n2 = No(2)
+
+n1.setProximo(n2)
+
+
+print(n1.getProximo())
+
+'''
+
+'''
+f1 = Fila()
+
+f1.enfileirar(1)
+f1.enfileirar(2)
+f1.enfileirar(3)
+f1.enfileirar(4)
+f1.enfileirar(5)
+
+print(f1,'\n')
+
+f1.inverter()
+
+print(f1) 
+
+'''
+
+'''
+
+f1.desenfileirar()
+f1.desenfileirar()
+f1.desenfileirar()
+f1.desenfileirar()
+
+
+print(f1.tamanho())
+
+print(f1.vazia())
+
+print(f1.frente())
+'''
+
+
+
 
 '''
 
@@ -35,6 +140,9 @@ p1.empilhar(3)
 p1.empilhar(4)
 p1.empilhar(5)
 p1.empilhar(0)
+
+print(p1)  
+
 
 p1.buscar(0)
 
@@ -53,6 +161,7 @@ p1.desempilhar()
 print(p1.tamanho())
 
 print(p1.topo())
+
 '''
 
 
@@ -306,49 +415,6 @@ v = [-1,-2,-3,-4,-5,-6,1,2,3,0,4,5,6,0]
 print(TPilha2(p1,p2,v))
 
 '''
-
-#Implemente uma o jogo de baralho 21 usando uma fila para o baralho
-
-
-def menu():
-	opc_m = int(input('''
-			Bem-vindo ao 21 do Danniel!
-		1 - Novo jogo
-
-
-		Digite a opcão correspondente:\t'''))
-
-
-def carta():
-ouros = []
-paus = []
-copas = []
-espadas []
-for i in range(1,11):	
-	paus.append('Pau '+str(i))
-for i in range(1,11):	
-	ouros.append('Ouro '+str(i))
-for i in range(1,11):	
-	copas.append('Copa '+str(i))
-for i in range(1,11):	
-	espadas.append('Espada '+str(i))
-
-
-
-def Jogo():
-	opc_j = int(input('''
-		1 - Pega uma carta
-		2 - Para
-
-		Digite :'''))
-	if 
-
-
-
-while True:
-	menu()
-
-
 
 
 
