@@ -67,13 +67,53 @@ class ListaNaoordenada:
 		self.inicio = None
 	def vazia(self):
 		return self.inicio == None
-	def inserir(self,item):
+	def Inserir(self,item):
 		temp = No(item)
 		temp.getProximo(self.inicio)
 		self.inicio = temp
-	def buscar(self,item):
+	def Buscar(self,item):
 		atual = self.inicio
-		
+		encontrou =  False
+		while atual != None and not encontrou:
+			if atual.getValor() == item:
+				encontrou =  True
+			else:
+				atual = atual.getProximo()
+		return encontrou
+	def Tamanho(self):
+		atual = self.inicio
+		contador = 0
+		while atual != None:
+			contador +=1
+			atual = atual.getProximo()
+		return contador
+	def Imprimir(self,item):
+		atual = self.inicio
+		while atual != None:
+			print(atual.getValor())
+			atual = atual.getProximo()
+		return
+
+    def Remover(self,item):
+    	if self.inicio.getValor() == item:
+    		self.inicio = self.inicio.getProximo()
+
+
+
+
+
+
+
+l1 =  ListaNaoordenada()
+
+l1.Inserir(3)
+l1.Inserir(5)
+l1.Inserir(6)
+l1.Inserir(9)
+l1.Inserir(7)
+
+print(l1)
+
 
 
 
