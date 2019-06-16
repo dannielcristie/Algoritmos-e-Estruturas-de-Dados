@@ -92,12 +92,8 @@ class ListaNaoordenada:
 		while atual != None:
 			print(atual.getValor())
 			atual = atual.getProximo()
-		return
-
-    def Remover(self,item):
-    	if self.inicio.getValor() == item:
-    		self.inicio = self.inicio.getProximo()
-
+	
+'''
 
 
 
@@ -115,7 +111,7 @@ l1.Inserir(7)
 print(l1)
 
 
-
+'''
 
 
 
@@ -336,7 +332,7 @@ p2.empilhar(265)
 
 print(pilhas_iguais(p1,p2))
 '''
-'''
+
 
 #Construa um programa utilizando uma pilha que resolva o seguinte problema: Armazene as placas dos carros (apenas os números) que estão estacionados numa rua sem saída estreita. Dado uma placa verifique se o carro está estacionado na rua. Caso esteja, informe a sequência de carros que deverá ser retirada para que o carro em questão consiga sair. 
 
@@ -374,7 +370,7 @@ def estaciomento(p1):
 
 
 estaciomento(Rua())
-'''
+
 
 '''
 # Implemente uma função chamada TPilha, que receba uma lista de inteiros com 15 elementos.
